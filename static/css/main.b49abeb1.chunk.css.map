@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,cACE,YACF,CAEA,KACE,aACF,CAEA,YACE,sBACF,CAEA,MACE,kBACF","file":"main.b49abeb1.chunk.css","sourcesContent":["#errorMessage {\n  color: tomato;\n}\n\n#url {\n  color: inherit;\n}\n\n.pagination {\n  justify-content: center;\n}\n\ntable {\n  table-layout: fixed;\n}\n"]}
