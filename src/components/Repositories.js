@@ -3,10 +3,17 @@ import "../App.css";
 
 const Repositories = ({ reposPerPage, currentPage, repos }) => {
   const repoList = repos.map((repo, i) => {
-    const { name, description, html_url, stargazers_count, created_at } = repo;
+    const {
+      name,
+      id,
+      description,
+      html_url,
+      stargazers_count,
+      created_at,
+    } = repo;
     const listPosition = (currentPage - 1) * reposPerPage + i + 1;
     return (
-      <tr key={i} title={description}>
+      <tr key={id} title={description}>
         <th scope="col">{listPosition}</th>
         <td>
           <a id="url" href={html_url} rel="noreferrer" target="_blank">

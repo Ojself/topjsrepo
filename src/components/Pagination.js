@@ -5,25 +5,25 @@ const Pagination = ({ currentPage, reposPerPage, totalRepos, paginate }) => {
   for (let i = 1; i <= Math.ceil(totalRepos / reposPerPage); i++) {
     pageNumbers.push(i);
   }
+
+  const paginationList = pageNumbers.map((number) => {
+    // gives bold font to the current page number
+    const boldFont = currentPage === number ? "font-weight-bold" : "";
+    return (
+      <li key={number} className="page-item">
+        <a
+          onClick={() => paginate(number)}
+          href="#!"
+          className={`page-link ${boldFont}`}
+        >
+          {number}
+        </a>
+      </li>
+    );
+  });
   return (
     <nav>
-      <ul className="pagination">
-        {pageNumbers.map((number, i) => {
-          // gives bold font to the current page number
-          const boldFont = currentPage === number ? "font-weight-bold" : "";
-          return (
-            <li key={i} className={`page-item ${boldFont}`}>
-              <a
-                onClick={() => paginate(number)}
-                href="!#"
-                className="page-link"
-              >
-                {number}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+      <ul className="pagination">{paginationList}</ul>
     </nav>
   );
 };
