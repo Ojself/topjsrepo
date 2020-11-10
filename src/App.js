@@ -47,7 +47,7 @@ const App = () => {
     <img src={`${process.env.PUBLIC_URL}/assets/ghlogo.png`} id="spinner-loading" alt="loading" />
   ) : (
     <>
-                <p class="lead mb-0 ">Most popular Github repositories written in mainly javascript ⭐️</p>
+      <h5 className="lead mb-0 text-center ">Most starred Github repositories written in javascript ⭐️</h5>
 
       <Repositories
         reposPerPage={REPOS_PER_PAGE}
@@ -62,13 +62,17 @@ const App = () => {
       />
     </>
   );
-
+  const containerStyle = isMobileDevice() ? "" : "container"
   return (
-    <div className="container d-flex flex-column my-5 align-items-center">
+    <div className={`${containerStyle} d-flex flex-column my-5 align-items-center`}>
       {errorMessage && <h4 id="errorMessage">{errorMessage}</h4>}
       {mainContent}
     </div>
   );
 };
+
+const isMobileDevice = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
 
 export default App;
