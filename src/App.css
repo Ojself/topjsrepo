@@ -12,9 +12,11 @@
 
 table {
   table-layout: fixed;
+  overflow-x: auto;
+
 }
 
-.spinner-loading {
+#spinner-loading {
   width: 10vmax;
   height: auto;
   background-color: #222;
@@ -22,8 +24,16 @@ table {
   pointer-events: none;
 }
 
+body {
+  overflow-x: hidden;
+  background: #74ebd5;  
+  background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .spinner-loading {
+  #spinner-loading {
     animation: spinner infinite 3s linear;
   }
 }
