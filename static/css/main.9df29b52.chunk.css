@@ -1,2 +1,0 @@
-#errorMessage{color:tomato}#url{color:inherit}.pagination{justify-content:center}table{table-layout:fixed;overflow-x:auto}#spinner-loading{width:10vmax;height:auto;background-color:#222;border-radius:25%;pointer-events:none}body{overflow-x:hidden;background:#74ebd5;background:linear-gradient(90deg,#74ebd5,#acb6e5);min-height:100vh}@media (prefers-reduced-motion:no-preference){#spinner-loading{animation:spinner 3s linear infinite}}@keyframes spinner{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}
-/*# sourceMappingURL=main.9df29b52.chunk.css.map */
