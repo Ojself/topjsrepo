@@ -2,7 +2,6 @@ import React from "react";
 import "../App.css";
 
 const Repositories = ({ reposPerPage, currentPage, repos }) => {
-  console.log(repos)
   const repoList = repos.map((repo, i) => {
     const {
       created_at,
