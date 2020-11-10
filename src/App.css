@@ -11,9 +11,7 @@
 }
 
 table {
-  table-layout: fixed;
   overflow-x: auto;
-
 }
 
 #spinner-loading {

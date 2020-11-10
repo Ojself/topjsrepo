@@ -2,26 +2,29 @@ import React from "react";
 import "../App.css";
 
 const Repositories = ({ reposPerPage, currentPage, repos }) => {
+  console.log(repos)
   const repoList = repos.map((repo, i) => {
     const {
-      name,
-      id,
+      created_at,
       description,
       html_url,
+      id,
+      name,
+      open_issues,
       stargazers_count,
-      created_at,
     } = repo;
     const listPosition = (currentPage - 1) * reposPerPage + i + 1;
     return (
       <tr className="d-flex" key={id} title={description}>
         <th className="col-2" scope="col">{listPosition}</th>
-        <td className="col-5">
+        <td className="col-4">
           <a id="url" href={html_url} rel="noreferrer" target="_blank">
             {name}
           </a>
         </td>
-        <td className="col-3">{stargazers_count.toLocaleString()}</td>
-        <td className="col-2">{new Date(created_at).getFullYear()}</td>
+        <td className="col-2">{stargazers_count.toLocaleString()}</td>
+        <td className="col-2 text-center">{open_issues.toLocaleString()}</td>
+        <td className="col-2 text-center">{new Date(created_at).getFullYear()}</td>
       </tr>
     );
   });
@@ -40,13 +43,16 @@ const Repositories = ({ reposPerPage, currentPage, repos }) => {
           <th className="col-2" scope="col">
             #
           </th>
-          <th className="col-5" scope="col">
+          <th className="col-4" scope="col">
             Name
           </th>
-          <th className="col-3 pl-4" scope="col">
+          <th className="col-2 pl-4" scope="col">
             {ghStarSvg}
           </th>
-          <th className="col-2" scope="col">
+          <th className="col-2 text-center" scope="col">
+            Open issues
+          </th>
+          <th className="col-2 text-center" scope="col">
             Created
           </th>
         </tr>
