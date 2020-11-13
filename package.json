@@ -3,6 +3,7 @@
   "name": "topjsrepo",
   "version": "1.0.0",
   "private": true,
+  "author": "Markus Heldrup"
   "dependencies": {
     "axios": "^0.21.0",
     "bootstrap-icons": "^1.1.0",
