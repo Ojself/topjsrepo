@@ -1,5 +1,7 @@
 # Top Javascript Repositories
 
+![Preview](public/topjsrepopreview.gif)
+
 ## URL
 
 - [Website](https://ojself.github.io/topjsrepo/)
